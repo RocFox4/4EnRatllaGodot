@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2sokoow6ensk"]
+
+[ext_resource type="Script" path="res://SCRIPTS/inici.gd" id="1_1fea4"]
+[ext_resource type="Texture2D" uid="uid://b66r4geamiod" path="res://ASSETS/Titol.png" id="2_361tr"]
+
+[sub_resource type="FontFile" id="FontFile_eepx5"]
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/35/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yybd7"]
+font = SubResource("FontFile_eepx5")
+font_size = 35
+
+[node name="Inici" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1fea4")
+
+[node name="Guanyador" type="Label" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 500.0
+offset_right = 699.0
+offset_bottom = 547.0
+label_settings = SubResource("LabelSettings_yybd7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inici" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 580.0
+offset_right = 242.0
+offset_bottom = 611.0
+text = "Jugador vs Jugador"
+
+[node name="Sortir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 580.0
+offset_right = 415.0
+offset_bottom = 611.0
+text = "SORTIR
+"
+
+[node name="Opcions" type="Button" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 580.0
+offset_right = 653.0
+offset_bottom = 611.0
+text = "Jugador vs PC"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(383, 294)
+scale = Vector2(0.207863, 0.207863)
+texture = ExtResource("2_361tr")
+
+[connection signal="pressed" from="Inici" to="." method="_on_inici_pressed"]
+[connection signal="pressed" from="Sortir" to="." method="_on_sortir_pressed"]
+[connection signal="pressed" from="Opcions" to="." method="_on_opcions_pressed"]
